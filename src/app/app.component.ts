@@ -77,21 +77,21 @@ export class AppComponent {
 
     A(c:any)
     {
-      c = JSON.stringify(c);
+      // c = JSON.stringify(c);
       return this.http.post<any>(this.add,c).pipe(tap((res:any)=>
       {
-        console.log(res)
+        // console.log(res)
       }
 
       ),
       catchError((e:any)=>{
-        console.log(e)
+        // console.log(e)
         return e;
-      })
+      }) 
       )
       .subscribe((r:any)=>{
-        this.x = JSON.parse(r);
-       console.log(this.x);
+        // this.x = JSON.parse(r);
+       console.log(r.data);
       })
   }
   

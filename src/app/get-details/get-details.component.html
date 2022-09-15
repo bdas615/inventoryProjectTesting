@@ -1,0 +1,80 @@
+<p>get-details works!</p>
+
+<div *ngFor="let a of a">{{a.DevType}}</div>
+
+<form [formGroup]="entryForm" (ngSubmit)="formSubmit()">
+
+    <p>Device Type
+    <input type="text" formControlName="DevType" placeholder="Enter Device Type"/>
+    </p>
+    <p>Other Device Type
+    <input type="text" formControlName="DevTypeOther" placeholder="Enter Other Device Type"/>
+    </p>
+
+    <p>Make
+    <input type="text" formControlName="Make" placeholder="Enter Make of Device"/>
+    </p>
+    
+    <p>Model
+    <input type="text" formControlName="Model" placeholder="Enter Model of Device"/>
+    </p>
+
+    <p>Owner
+    <input type="text" formControlName="Owner" placeholder="Enter Owner of Device"/>
+    </p>
+
+    <p>Location
+    <input type="text" formControlName="Location" placeholder="Enter Location of Device"/>
+    </p>
+
+    <p>Serial
+        <input type="text" formControlName="Serial" placeholder="Enter Serial of Device"/>
+    </p>
+
+    <p>Purchase Date
+        <input type="text" formControlName="PurchaseDate" placeholder="Enter Purchase Date of Device"/>
+    </p>
+    
+    <p>Warranty Expiry Date
+        <input type="text" formControlName="WarrantyExpDate" placeholder="Enter Warranty Expiry Date of Device"/>
+    </p>
+
+    <p>Service Expiry Date
+        <input type="text" formControlName="ServiceExpDate" placeholder="Enter Service Expiry Date of Device"/>
+    </p>
+
+    <p>Value
+        <input type="text" formControlName="Value" placeholder="Enter Value of Device"/>
+    </p>
+
+    <p>Size
+        <input type="text" formControlName="Size" placeholder="Enter Size of Device"/>
+    </p>
+
+    <p>Toner
+        <input type="text" formControlName="Toner" placeholder="Enter Toner of Device"/>
+    </p>
+
+    
+    <p>MAC Address
+        <input type="text" formControlName="MacAddress" placeholder="Enter MAC Address of Device"/>
+    </p>
+    
+    <p>IP Address
+        <input type="text" formControlName="IPAddress" placeholder="Enter IP Address of Device"/>
+    </p>
+
+    
+    <p>Cell Number
+        <input type="text" formControlName="CellNumber" placeholder="Enter Cell Number of Device"/>
+    </p>
+
+    <button type="submit">Button</button>
+</form>
+
+
+
+
+
+
+<router-outlet></router-outlet>
