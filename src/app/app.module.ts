@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import { GetDetailsComponent } from './get-details/get-details.component';
+import { AddDetailsComponent } from './add-details/add-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GetDetailsComponent
+    GetDetailsComponent,
+    AddDetailsComponent
   ],
   imports: [
     BrowserModule,

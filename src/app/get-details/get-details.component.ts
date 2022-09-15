@@ -115,16 +115,26 @@ export class GetDetailsComponent implements OnInit {
     //   console.log(this.a);  
     // })
   }
-
-  formSubmit() 
+  
+ formSubmit() 
   {
     this.sww = this.entryForm.value;
+    this.a = JSON.stringify(this.sww);
 
-    console.log(this.z);
+    let pay = 
+    {
+      payload : `{this.a}`
+    }
+    
+    console.log(this.sww);
     
     this.http
       .post<any>('https://tools.brandinstitute.com/wsInventory/wsInventory.asmx?op=Device_Add',
-       this.sww);
-    console.log('data successfully submitted')
+       pay);
+
+       console.log(pay);  
+    console.log('data successfully submitted');
   }
+
+  
 }
