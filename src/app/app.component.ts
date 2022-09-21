@@ -30,7 +30,7 @@ export class AppComponent {
   title = 'practice';
   b:any;
   form!:FormGroup;
-  x!:Aa;
+ 
   y:any;
   a!:{data:null,msg:null,total:null};
   formBuilder: FormGroup<any> | undefined;
@@ -39,13 +39,7 @@ export class AppComponent {
 
   constructor(private serv:ServService,private http:HttpClient){}
 
-  ngOnInit()
-  {
-    // this.A().subscribe((res:response)=>{
-    //   this.x = JSON.parse(res.data);
-    //    console.log(this.x);
-    // })
-  }
+  ngOnInit() {  }
 
   userLogin=new FormGroup({
     token:new FormControl('',[Validators.required]),
@@ -54,7 +48,6 @@ export class AppComponent {
 
    fun()
    {
-   
     let c;
     console.log(this.userLogin.value);
     c = this.userLogin.value;

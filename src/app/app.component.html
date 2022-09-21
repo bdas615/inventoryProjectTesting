@@ -1,5 +1,5 @@
 
-
+<!-- 
 <form [formGroup]="userLogin" (ngSubmit)="fun()">
 token
 <input type="text" formControlName="token" />
@@ -8,6 +8,14 @@ devId
 <input type="text" formControlName="DevId"/>
 
 <button type="button" type="submit" >Button</button>
-</form>
+</form> -->
 
-<app-get-details></app-get-details>
+<button routerLink="get-details">Add Details</button>
+
+<button routerLink="add-details">Get details</button>
+
+<button routerLink="delete-details">Delete Details</button>
+
+<button routerLink="get-all-data">Get All Data</button>
+
+<router-outlet></router-outlet>

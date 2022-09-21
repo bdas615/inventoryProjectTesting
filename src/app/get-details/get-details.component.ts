@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { forkJoin } from 'rxjs';
+import { catchError, forkJoin, tap } from 'rxjs';
 import { ServService } from '../serv.service';
 
 interface t
@@ -119,22 +119,23 @@ export class GetDetailsComponent implements OnInit {
  formSubmit() 
   {
     this.sww = this.entryForm.value;
-    this.a = JSON.stringify(this.sww);
 
-    let pay = 
-    {
-      payload : `{this.a}`
-    }
-    
-    console.log(this.sww);
-    
-    this.http
-      .post<any>('https://tools.brandinstitute.com/wsInventory/wsInventory.asmx?op=Device_Add',
-       pay);
+    this.formSubmitData(this.sww);
 
-       console.log(pay);  
-    console.log('data successfully submitted');
   }
-
-  
+    
+  formSubmitData(w:any){
+   
+    this.http
+      .post('https://tools.brandinstitute.com/wsInventory/wsInventory.asmx/Device_Add',
+      w).pipe(
+        tap(data => {
+        console.log(data)
+        })
+        ).subscribe((r:any)=>
+        {
+          console.log(r.data);
+        })
+    
+  }
 }

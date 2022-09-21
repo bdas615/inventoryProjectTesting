@@ -56,7 +56,24 @@ export class ServService {
   }
 
   
- 
+  getContent(){
 
+    let x = 
+    { 
+      "token" : "A12F7A58-842D-4111-A44D-5F8C4E1AA521",
+      "DevId" : "3"
+    }
 
+     return this.http.post<any>(this.addDev,x).pipe(tap((res:any)=>{
+      console.log(res);
+    }
+    ),
+    catchError((e:any)=>
+    {
+      console.log(e);
+      return e;
+    }
+    )
+    )
+  }
 }

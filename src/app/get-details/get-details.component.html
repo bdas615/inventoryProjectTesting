@@ -4,6 +4,10 @@
 
 <form [formGroup]="entryForm" (ngSubmit)="formSubmit()">
 
+    <p>Token
+        <input type="text" formControlName="token" placeholder="Enter token"/>
+    </p>
+    
     <p>Device Type
     <input type="text" formControlName="DevType" placeholder="Enter Device Type"/>
     </p>
@@ -70,6 +74,9 @@
     </p>
 
     <button type="submit">Button</button>
+
+
+    
 </form>
 
 

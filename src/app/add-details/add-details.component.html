@@ -1,1 +1,28 @@
-<p>add-details works!</p>
+
+
+<form [formGroup]="formInput" (ngSubmit)="content()">
+token
+<input type="text" formControlName="token" />
+
+devId
+<input type="text" formControlName="DevId"/>
+
+
+<button type="button" type="submit" >Button</button>
+</form>
+
+<table>
+    <tr>
+        <td>ID
+            {{this.b.DevId}}
+        </td>
+        <td>Model
+            {{this.b.Model}}
+        </td>
+    </tr>
+    <tr>
+       
+    </tr>
+</table>
+
+<router-outlet></router-outlet>

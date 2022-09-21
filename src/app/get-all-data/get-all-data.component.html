@@ -1,0 +1,23 @@
+<p>get-all-data works!</p>
+
+<form [formGroup]="formFetch" (ngSubmit)="fetchData()">
+
+    token
+    <input type="text" formControlName="token" placeholder="Enter token" />
+
+<button type="button" type="submit">Button</button>
+
+</form>
+
+<p>{{this.c}}</p>
+
+<table>
+    <tr>
+        <th>DevId</th>
+    </tr>
+
+    <tr *ngFor="let c of c">
+        <td>{{c.DevId}}</td>
+    </tr>
+
+</table>
